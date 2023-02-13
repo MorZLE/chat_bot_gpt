@@ -36,7 +36,7 @@ def main():
 
     @dp.message_handler(commands=['clear_hs'])
     async def history(message: types.Message):
-        if message.from_user.id == 744811911:
+        if message.from_user.id == admin_id:
             cur.execute('DELETE FROM USER;')
             await message.reply('Грехи прощены!')
 
