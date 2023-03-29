@@ -1,3 +1,22 @@
+import openai
+import sqlite3 as sl
+from DB import DB
+from aiogram import Bot, types
+from aiogram.dispatcher import Dispatcher
+from aiogram.utils import executor
+from prettytable import from_db_cursor
+from back import keep_alive
+from flask import Flask
+from flask import request
+from threading import Thread
+import time
+import requests
+
+
+
+
+
+
 def main():
     with open('key.txt', encoding='utf-8') as f:
         key_i = f.readline().rstrip()
