@@ -1,14 +1,3 @@
-import openai
-import sqlite3 as sl
-from aiogram import Bot, types
-from aiogram.dispatcher import Dispatcher
-from aiogram.utils import executor
-from prettytable import from_db_cursor
-from threading import Thread
-import time
-import requests
-
-
 def main():
     with open('key.txt', encoding='utf-8') as f:
         key_i = f.readline().rstrip()
@@ -99,7 +88,3 @@ def main():
         return len(res) == 0
 
     executor.start_polling(dp, skip_updates=True, on_startup=start_bot)
-
-
-if __name__ == '__main__':
-    main()
